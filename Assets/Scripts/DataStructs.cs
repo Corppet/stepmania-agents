@@ -172,7 +172,7 @@ public enum Directions { left, down, up, right };
 public enum Judgements { marvelous, perfect, great, good, bad, miss };
 public enum Ratings { ss, s, a, b, c, d };
 public enum NoteTypes { Tap = 1, HoldHeader = 2, HoldTail = 3 };
-public enum ScrollDirction { down, up }
+public enum ScrollDirection { down, up }
 public enum NoteScaleMode { none, appear, disappear, bigboy, jumping }
 // Menus
 public enum SongSelectState { intro, preview, focus, loadingSongs, loadingGame, inModifiers };

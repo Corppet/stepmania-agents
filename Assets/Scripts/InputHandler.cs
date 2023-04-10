@@ -8,58 +8,62 @@ public class InputHandler : MonoBehaviour
     private static InputHandler m_instance;
 
     #region Delegates
+    
     // Delegates for key presses
-    public delegate void KeyLeft();
-    public delegate void KeyDown();
-    public delegate void KeyUp();
-    public delegate void KeyRight();
+    [HideInInspector] public delegate void KeyDown();
+    [HideInInspector] public delegate void KeyUp();
+    [HideInInspector] public delegate void KeyRight();
+    [HideInInspector] public delegate void KeyLeft();
 
-    public delegate void KeyStart();
-    public delegate void KeyExit();
+    [HideInInspector] public delegate void KeyStart();
+    [HideInInspector] public delegate void KeyExit();
 
     // Delegates for key helds
-    public delegate void KeyLeftHeld();
-    public delegate void KeyDownHeld();
-    public delegate void KeyUpHeld();
-    public delegate void KeyRightHeld();
+    [HideInInspector] public delegate void KeyLeftHeld();
+    [HideInInspector] public delegate void KeyDownHeld();
+    [HideInInspector] public delegate void KeyUpHeld();
+    [HideInInspector] public delegate void KeyRightHeld();
 
     // Delegates for key releases
-    public delegate void KeyLeftRelease();
-    public delegate void KeyDownRelease();
-    public delegate void KeyUpRelease();
-    public delegate void KeyRightRelease();
+    [HideInInspector] public delegate void KeyLeftRelease();
+    [HideInInspector] public delegate void KeyDownRelease();
+    [HideInInspector] public delegate void KeyUpRelease();
+    [HideInInspector] public delegate void KeyRightRelease();
 
     // Delegates for when no key is pressed
-    public delegate void NoKeyHorizontal();
-    public delegate void NoKeyVertical();
+    [HideInInspector] public delegate void NoKeyHorizontal();
+    [HideInInspector] public delegate void NoKeyVertical();
+    
     #endregion
 
     #region Events
+    
     // Events - key press
-    public event Action KeyLeftEvent;
-    public event Action KeyDownEvent;
-    public event Action KeyUpEvent;
-    public event Action KeyRightEvent;
+    [HideInInspector] public event Action KeyLeftEvent;
+    [HideInInspector] public event Action KeyDownEvent;
+    [HideInInspector] public event Action KeyUpEvent;
+    [HideInInspector] public event Action KeyRightEvent;
 
-    public event Action KeyStartEvent;
-    public event Action KeyRestartEvent;
-    public event Action KeyExitEvent;
+    [HideInInspector] public event Action KeyStartEvent;
+    [HideInInspector] public event Action KeyRestartEvent;
+    [HideInInspector] public event Action KeyExitEvent;
 
     // Events - key helds
-    public event Action KeyLeftHeldEvent;
-    public event Action KeyDownHeldEvent;
-    public event Action KeyUpHeldEvent;
-    public event Action KeyRightHeldEvent;
+    [HideInInspector] public event Action KeyLeftHeldEvent;
+    [HideInInspector] public event Action KeyDownHeldEvent;
+    [HideInInspector] public event Action KeyUpHeldEvent;
+    [HideInInspector] public event Action KeyRightHeldEvent;
 
     // Events - key releases
-    public event Action KeyLeftReleaseEvent;
-    public event Action KeyDownReleaseEvent;
-    public event Action KeyUpReleaseEvent;
-    public event Action KeyRightReleaseEvent;
+    [HideInInspector] public event Action KeyLeftReleaseEvent;
+    [HideInInspector] public event Action KeyDownReleaseEvent;
+    [HideInInspector] public event Action KeyUpReleaseEvent;
+    [HideInInspector] public event Action KeyRightReleaseEvent;
 
     // Events - no keys
-    public event Action NoKeyHorizontalEvent;
-    public event Action NoKeyVerticalEvent;
+    [HideInInspector] public event Action NoKeyHorizontalEvent;
+    [HideInInspector] public event Action NoKeyVerticalEvent;
+    
     #endregion
 
     #region Keys
@@ -94,8 +98,10 @@ public class InputHandler : MonoBehaviour
                 m_instance = FindObjectOfType<InputHandler>();
                 if (m_instance == null)
                 {
-                    GameObject obj = new GameObject();
-                    obj.name = typeof(InputHandler).Name;
+                    GameObject obj = new()
+                    {
+                        name = typeof(InputHandler).Name
+                    };
                     m_instance = obj.AddComponent<InputHandler>();
                     DontDestroyOnLoad(obj);
                 }
@@ -167,108 +173,136 @@ public class InputHandler : MonoBehaviour
 
     protected virtual void OnKeyLeft()
     {
-        if (KeyLeftEvent != null)
-            KeyLeftEvent();
-            
+        KeyLeftEvent?.Invoke();
     }
     protected virtual void OnKeyDown()
     {
-        if (KeyDownEvent != null)
-            KeyDownEvent();
-
+        KeyDownEvent?.Invoke();
     }
     protected virtual void OnKeyUp()
     {
-        if (KeyUpEvent != null)
-            KeyUpEvent();
-
+        KeyUpEvent?.Invoke();
     }
     protected virtual void OnKeyRight()
     {
-        if (KeyRightEvent != null)
-            KeyRightEvent();
-
+        KeyRightEvent?.Invoke();
     }
 
     protected virtual void OnKeyStart()
     {
-        if (KeyStartEvent != null)
-            KeyStartEvent();
-
+        KeyStartEvent?.Invoke();
     }
     protected virtual void OnKeyRestart()
     {
-        if (KeyRestartEvent != null)
-            KeyRestartEvent();
+        KeyRestartEvent?.Invoke();
     }
     protected virtual void OnKeyExit()
     {
-        if (KeyExitEvent != null)
-            KeyExitEvent();
-
+        KeyExitEvent?.Invoke();
     }
 
     protected virtual void OnKeyLeftHeld()
     {
-        if (KeyLeftHeldEvent != null)
-            KeyLeftHeldEvent();
-
+        KeyLeftHeldEvent?.Invoke();
     }
     protected virtual void OnKeyDownHeld()
     {
-        if (KeyDownHeldEvent != null)
-            KeyDownHeldEvent();
-
+        KeyDownHeldEvent?.Invoke();
     }
     protected virtual void OnKeyUpHeld()
     {
-        if (KeyUpHeldEvent != null)
-            KeyUpHeldEvent();
-
+        KeyUpHeldEvent?.Invoke();
     }
     protected virtual void OnKeyRightHeld()
     {
-        if (KeyRightHeldEvent != null)
-            KeyRightHeldEvent();
-
+        KeyRightHeldEvent?.Invoke();
     }
 
     protected virtual void OnKeyLeftRelease()
     {
-        if (KeyLeftReleaseEvent != null)
-            KeyLeftReleaseEvent();
-
+        KeyLeftReleaseEvent?.Invoke();
     }
     protected virtual void OnKeyDownRelease()
     {
-        if (KeyDownReleaseEvent != null)
-            KeyDownReleaseEvent();
-
+        KeyDownReleaseEvent?.Invoke();
     }
     protected virtual void OnKeyUpRelease()
     {
-        if (KeyUpReleaseEvent != null)
-            KeyUpReleaseEvent();
-
+        KeyUpReleaseEvent?.Invoke();
     }
     protected virtual void OnKeyRightRelease()
     {
-        if (KeyRightReleaseEvent != null)
-            KeyRightReleaseEvent();
-
+        KeyRightReleaseEvent?.Invoke();
     }
 
     protected virtual void OnNoKeyHorizontal()
     {
-        if (NoKeyHorizontalEvent != null)
-            NoKeyHorizontalEvent();
-
+        NoKeyHorizontalEvent?.Invoke();
     }
     protected virtual void OnNoKeyVertical()
     {
-        if (NoKeyVerticalEvent != null)
-            NoKeyVerticalEvent();
+        NoKeyVerticalEvent?.Invoke();
+    }
 
+    #endregion
+
+    #region Dancing Agents Input
+
+    public void InputPress(Directions direction)
+    {
+        switch (direction)
+        {
+            case Directions.left:
+                OnKeyLeft();
+                break;
+            case Directions.right:
+                OnKeyRight();
+                break;
+            case Directions.up:
+                OnKeyUp();
+                break;
+            case Directions.down:
+                OnKeyDown();
+                break;
+        }
+    }
+
+    public void InputHeld(Directions direction)
+    {
+        switch (direction)
+        {
+            case Directions.left:
+                OnKeyLeftHeld();
+                break;
+            case Directions.right:
+                OnKeyRightHeld();
+                break;
+            case Directions.up:
+                OnKeyUpHeld();
+                break;
+            case Directions.down:
+                OnKeyDownHeld();
+                break;
+        }
+    }
+
+    public void InputRelease(Directions direction)
+    {
+        switch (direction)
+        {
+            case Directions.left:
+                OnKeyLeftRelease();
+                break;
+            case Directions.right:
+                OnKeyRightRelease();
+                break;
+            case Directions.up:
+                OnKeyUpRelease();
+                break;
+            case Directions.down:
+                OnKeyDownRelease();
+                break;
+        }
     }
 
     #endregion

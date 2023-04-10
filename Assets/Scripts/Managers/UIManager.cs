@@ -79,7 +79,7 @@ public class UIManager : MonoBehaviour
         m_gameUI.GetComponentInParent<Canvas>().sortingOrder = Modifications.Instance.UILayer * 5;
 
         // Move the progress to the bottom if ddr style is active
-        if (Modifications.Instance.ScrollDirection == ScrollDirction.up)
+        if (Modifications.Instance.ScrollDirection == ScrollDirection.up)
             m_progress.anchoredPosition = new Vector3(m_progress.anchoredPosition.x, m_progress.anchoredPosition.y * -1);
 
         // Subscribe to events

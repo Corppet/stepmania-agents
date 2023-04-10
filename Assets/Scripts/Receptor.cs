@@ -17,7 +17,7 @@ public class Receptor : MonoBehaviour
 
     private float m_emmisionScale = 0;
     
-	void Start ()
+	void Start()
     {
         m_particleSystem = transform.Find("ParticleSystem").GetComponent<ParticleSystem>();
 
@@ -77,7 +77,7 @@ public class Receptor : MonoBehaviour
         }
     }
 
-    void Update ()
+    void Update()
     {
         // Update scale
         m_scaleTimer += Time.deltaTime;

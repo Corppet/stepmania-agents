@@ -10,23 +10,23 @@ public class GameCamera : MonoBehaviour
     private float m_screenshakeTime = 0;
 
     private readonly float m_screenshakeMaxPosition = 2;
-    private readonly float m_screenshakeMaxRotation = 20;
+    //private readonly float m_screenshakeMaxRotation = 20;
 
     private bool m_camIdle = true;
     private float m_fromIdleTimer = 0;
     private float m_fromIdleLength = 1;
 
-	void Start ()
+	void Start()
     {
         var yBase = 0.0f;
 
         switch (Modifications.Instance.ScrollDirection)
         {
-            case ScrollDirction.down:
+            case ScrollDirection.down:
                 yBase = 3.5f;
                 break;
 
-            case ScrollDirction.up:
+            case ScrollDirection.up:
                 yBase = -3.5f;
                 break;
         }
@@ -50,7 +50,7 @@ public class GameCamera : MonoBehaviour
         GameManager.Instance.GameplayManager.NoteHitEvent -= OnNoteHit;
     }
 
-    void Update ()
+    void Update()
     {
         Vector3 pos = m_originalPos;
 

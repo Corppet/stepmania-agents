@@ -35,7 +35,7 @@ public class HoldTail : Note
         m_rotate = false;
 
         // Correct the rotation when the scroll direction is reversed
-        if(Modifications.Instance.ScrollDirection == ScrollDirction.up)
+        if(Modifications.Instance.ScrollDirection == ScrollDirection.up)
         {
             transform.eulerAngles += new Vector3(0, 0, 180);
         }

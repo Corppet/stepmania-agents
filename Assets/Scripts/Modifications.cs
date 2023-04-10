@@ -94,7 +94,7 @@ public class Modifications
 
     public int MaxNoteUpdates = 50;
 
-    public ScrollDirction ScrollDirection = ScrollDirction.down;
+    public ScrollDirection ScrollDirection = ScrollDirection.down;
 
     public int ReceptorHeight = 0; // -1 higher, 0 normal, 1 lower
     public int ReceptorPosition = 0; // -1 left, 0 center, 1 right

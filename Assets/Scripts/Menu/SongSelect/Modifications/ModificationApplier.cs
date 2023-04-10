@@ -180,7 +180,7 @@ public class ModificationApplier : MonoBehaviour
         Modifications.Instance.Vignette = (int)m_vignette.GetValue();
         Modifications.Instance.SpecialEffect = (int)m_specialEffect.GetValue();
 
-        Modifications.Instance.ScrollDirection = (ScrollDirction)m_scrollDirection.GetValue();
+        Modifications.Instance.ScrollDirection = (ScrollDirection)m_scrollDirection.GetValue();
 
         Modifications.Instance.ResolutionIndex = (int)m_resolutionIndex.GetValue();
         Modifications.Instance.Fullscreen = (int)m_fullscreenMode.GetValue();

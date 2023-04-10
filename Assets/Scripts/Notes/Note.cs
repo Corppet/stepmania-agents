@@ -140,11 +140,11 @@ public class Note : MonoBehaviour
         float scrollDir = 0;
         switch (Modifications.Instance.ScrollDirection)
         {
-            case ScrollDirction.down:
+            case ScrollDirection.down:
                 scrollDir = 1.0f;
                 break;
 
-            case ScrollDirction.up:
+            case ScrollDirection.up:
                 scrollDir = -1.0f;
                 break;
         }
@@ -165,11 +165,11 @@ public class Note : MonoBehaviour
         {
             switch (Modifications.Instance.ScrollDirection)
             {
-                case ScrollDirction.down:
+                case ScrollDirection.down:
                     pos.y = Mathf.Clamp(pos.y, m_receptor.transform.position.y, pos.y + 1);
                     break;
 
-                case ScrollDirction.up:
+                case ScrollDirection.up:
                     pos.y = Mathf.Clamp(pos.y, pos.y - 1, m_receptor.transform.position.y);
                     break;
             }
