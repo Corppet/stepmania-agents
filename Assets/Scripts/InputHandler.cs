@@ -248,6 +248,10 @@ public class InputHandler : MonoBehaviour
 
     #region Dancing Agents Input
 
+    /// <summary>
+    /// Mimic input when pressing on a dance pad panel with your foot.
+    /// </summary>
+    /// <param name="direction"></param>
     public void InputPress(Directions direction)
     {
         switch (direction)
@@ -267,6 +271,9 @@ public class InputHandler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Mimic input when leaving your foot on a dance pad panel.
+    /// </summary>
     public void InputHeld(Directions direction)
     {
         switch (direction)
@@ -286,6 +293,10 @@ public class InputHandler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Mimic input when lifting your foot on a dance pad panel.
+    /// </summary>
+    /// <param name="direction"></param>
     public void InputRelease(Directions direction)
     {
         switch (direction)

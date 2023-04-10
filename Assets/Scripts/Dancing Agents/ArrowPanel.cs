@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,20 +15,33 @@ namespace DancingAgents
         [SerializeField] private Sprite m_litSprite;
         [SerializeField] private Sprite m_unlitSprite;
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        public void HoverEnter(AgentFoot foot)
         {
-            if (collision.CompareTag("Foot"))
-            {
-                InputHandler.Instance.InputPress(direction);
-            }
+            foot.DropFoot += Press;
+            foot.HoldFoot += Hold;
+            foot.LiftFoot += Release;
         }
 
-        private void OnTriggerExit2D(Collider2D collision)
+        public void HoverExit(AgentFoot foot)
         {
-            if (collision.CompareTag("Foot"))
-            {
-                InputHandler.Instance.InputRelease(direction);
-            }
+            foot.DropFoot -= Press;
+            foot.HoldFoot -= Hold;
+            foot.LiftFoot -= Release;
+        }
+
+        private void Press()
+        {
+            InputHandler.Instance.InputPress(direction);
+        }
+
+        private void Hold()
+        {
+            InputHandler.Instance.InputHeld(direction);
+        }
+
+        private void Release()
+        {
+            InputHandler.Instance.InputRelease(direction);
         }
     }
 }

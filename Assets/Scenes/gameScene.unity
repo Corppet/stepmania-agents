@@ -238,7 +238,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.87}
-  m_SizeDelta: {x: 1.01, y: 0.73}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &75101272
 MonoBehaviour:
@@ -968,7 +968,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.87}
-  m_SizeDelta: {x: 0.37, y: 0.73}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359528095
 MonoBehaviour:
@@ -1389,7 +1389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &385728248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1699,6 +1699,7 @@ GameObject:
   - component: {fileID: 393795611}
   - component: {fileID: 393795612}
   - component: {fileID: 393795613}
+  - component: {fileID: 393795614}
   m_Layer: 0
   m_Name: Down Arrow Panel
   m_TagString: Arrow Panel
@@ -1799,6 +1800,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.41, y: 2.4}
   m_EdgeRadius: 0
+--- !u!114 &393795614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393795610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef22cfcb7f38044f97e993d19171dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 1
+  m_litSprite: {fileID: 21300000, guid: 5f733e110c58be24f9c8046fdee9487c, type: 3}
+  m_unlitSprite: {fileID: 21300000, guid: fe82582c50bfc32458a024634e7af0d5, type: 3}
 --- !u!1 &396244456
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,7 +2130,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 201.12, y: 84.7}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &429842858
 MonoBehaviour:
@@ -2316,6 +2332,7 @@ GameObject:
   - component: {fileID: 508010401}
   - component: {fileID: 508010403}
   - component: {fileID: 508010402}
+  - component: {fileID: 508010404}
   m_Layer: 0
   m_Name: Left Foot
   m_TagString: Foot
@@ -2422,6 +2439,18 @@ CircleCollider2D:
   m_Offset: {x: 0.01, y: -0.75}
   serializedVersion: 2
   m_Radius: 0.30918837
+--- !u!114 &508010404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508010399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1778d237a3d028e42b947246e91e633a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &515962084
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,6 +2539,7 @@ GameObject:
   - component: {fileID: 546809052}
   - component: {fileID: 546809054}
   - component: {fileID: 546809053}
+  - component: {fileID: 546809055}
   m_Layer: 0
   m_Name: Right Foot
   m_TagString: Foot
@@ -2616,6 +2646,18 @@ CircleCollider2D:
   m_Offset: {x: -0.01, y: -0.75}
   serializedVersion: 2
   m_Radius: 0.30918837
+--- !u!114 &546809055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546809050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1778d237a3d028e42b947246e91e633a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &551404377
 GameObject:
   m_ObjectHideFlags: 0
@@ -19438,7 +19480,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.00036621094, y: -171.02}
-  m_SizeDelta: {x: 410.58, y: 104.5}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1298212938
 MonoBehaviour:
@@ -24891,6 +24933,7 @@ GameObject:
   - component: {fileID: 1573559583}
   - component: {fileID: 1573559584}
   - component: {fileID: 1573559585}
+  - component: {fileID: 1573559586}
   m_Layer: 0
   m_Name: Right Arrow Panel
   m_TagString: Arrow Panel
@@ -24991,6 +25034,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4, y: 2.42}
   m_EdgeRadius: 0
+--- !u!114 &1573559586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573559582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef22cfcb7f38044f97e993d19171dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 3
+  m_litSprite: {fileID: 21300000, guid: 32696f887daf873418ee4a6b7b9d2932, type: 3}
+  m_unlitSprite: {fileID: 21300000, guid: 0201d37c4098b0544800bc9562054ce4, type: 3}
 --- !u!1 &1595693753
 GameObject:
   m_ObjectHideFlags: 0
@@ -25029,7 +25087,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 4.46, y: 0.85}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1595693755
 MonoBehaviour:
@@ -25565,6 +25623,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1802774979}
+  - component: {fileID: 1802774980}
   m_Layer: 0
   m_Name: Dance Pad
   m_TagString: Untagged
@@ -25596,6 +25655,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1802774980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802774978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437dfb5f34bea434d8133d6ea66e0437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_feet:
+  - {fileID: 508010404}
+  - {fileID: 546809055}
 --- !u!1001 &1821942011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26038,7 +26112,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1.67, y: 0.59}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1871713668
 MonoBehaviour:
@@ -26189,7 +26263,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 14.999879, y: 0}
-  m_SizeDelta: {x: 130.73, y: 84.7}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1941067709
 MonoBehaviour:
@@ -26314,6 +26388,7 @@ GameObject:
   - component: {fileID: 1987362071}
   - component: {fileID: 1987362072}
   - component: {fileID: 1987362073}
+  - component: {fileID: 1987362074}
   m_Layer: 0
   m_Name: Up Arrow Panel
   m_TagString: Arrow Panel
@@ -26414,6 +26489,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.41, y: 2.4}
   m_EdgeRadius: 0
+--- !u!114 &1987362074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987362070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef22cfcb7f38044f97e993d19171dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 2
+  m_litSprite: {fileID: 21300000, guid: f86776b0c90454342bb35e72f4652e2b, type: 3}
+  m_unlitSprite: {fileID: 21300000, guid: 05d984aee40ae1b41b679098b65187d1, type: 3}
 --- !u!1 &1989040323
 GameObject:
   m_ObjectHideFlags: 0
@@ -27039,7 +27129,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -14.999909, y: 0}
-  m_SizeDelta: {x: 237.82, y: 84.7}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &2081391937
 MonoBehaviour:
@@ -27465,6 +27555,7 @@ GameObject:
   - component: {fileID: 2118414283}
   - component: {fileID: 2118414284}
   - component: {fileID: 2118414285}
+  - component: {fileID: 2118414286}
   m_Layer: 0
   m_Name: Left Arrow Panel
   m_TagString: Arrow Panel
@@ -27565,6 +27656,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4, y: 2.42}
   m_EdgeRadius: 0
+--- !u!114 &2118414286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118414282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef22cfcb7f38044f97e993d19171dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 0
+  m_litSprite: {fileID: 21300000, guid: e337adec8503052478901fa54c46e02f, type: 3}
+  m_unlitSprite: {fileID: 21300000, guid: 41143f736896c8d4d88bc8ed7439d4f3, type: 3}
 --- !u!1 &2132453375
 GameObject:
   m_ObjectHideFlags: 0
@@ -27583,7 +27689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2132453376
 RectTransform:
   m_ObjectHideFlags: 0
