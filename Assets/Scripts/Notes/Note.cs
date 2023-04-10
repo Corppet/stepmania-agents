@@ -255,6 +255,14 @@ public class Note : MonoBehaviour
         get { return m_type; }
     }
 
+    /// <summary>
+    /// The direction of the note
+    /// </summary>
+    public Directions Direction
+    {
+        get { return m_dir; }
+    }
+
     public Color NoteColor(float barpos)
     {
         Color color = new Color();

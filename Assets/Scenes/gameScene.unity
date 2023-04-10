@@ -2330,9 +2330,10 @@ GameObject:
   m_Component:
   - component: {fileID: 508010400}
   - component: {fileID: 508010401}
+  - component: {fileID: 508010404}
   - component: {fileID: 508010403}
   - component: {fileID: 508010402}
-  - component: {fileID: 508010404}
+  - component: {fileID: 508010405}
   m_Layer: 0
   m_Name: Left Foot
   m_TagString: Foot
@@ -2451,6 +2452,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1778d237a3d028e42b947246e91e633a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 50
+  maxAngularSpeed: 50
+--- !u!50 &508010405
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508010399}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &515962084
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,9 +2561,10 @@ GameObject:
   m_Component:
   - component: {fileID: 546809051}
   - component: {fileID: 546809052}
+  - component: {fileID: 546809055}
   - component: {fileID: 546809054}
   - component: {fileID: 546809053}
-  - component: {fileID: 546809055}
+  - component: {fileID: 546809056}
   m_Layer: 0
   m_Name: Right Foot
   m_TagString: Foot
@@ -2658,6 +2683,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1778d237a3d028e42b947246e91e633a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 50
+  maxAngularSpeed: 50
+--- !u!50 &546809056
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546809050}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &551404377
 GameObject:
   m_ObjectHideFlags: 0
@@ -25667,9 +25715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 437dfb5f34bea434d8133d6ea66e0437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_feet:
-  - {fileID: 508010404}
-  - {fileID: 546809055}
+  agentParent: {fileID: 592205296}
 --- !u!1001 &1821942011
 PrefabInstance:
   m_ObjectHideFlags: 0

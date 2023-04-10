@@ -204,7 +204,7 @@ public class ChartManager : MonoBehaviour
                                 break;
                         }
 
-                        // This might be a temporary solution unitill the notepool works
+                        // This might be a temporary solution until the notepool works
                         m_gameManager.AllNotes.Add(noteComp);
 
                         // Initalize the note
