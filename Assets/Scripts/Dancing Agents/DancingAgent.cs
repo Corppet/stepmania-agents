@@ -44,8 +44,6 @@ namespace DancingAgents
             m_leftFootInitRot = m_leftFoot.transform.rotation;
             m_rightFootInitPos = m_rightFoot.transform.position;
             m_rightFootInitRot = m_rightFoot.transform.rotation;
-
-            
         }
 
         public override void CollectObservations(VectorSensor sensor)
