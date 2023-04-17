@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DancingAgents;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -112,6 +113,16 @@ public class ScoreManager : MonoBehaviour
 
         var noteScore = m_largestScore / 100 * m_judgementWeights[j];
         m_score += noteScore * (1.0f + (Combo / 100.0f));
+
+        #region Dancing Agents Reward
+
+        KeyboardAgent kbAgent = KeyboardAgent.Instance;
+        if (kbAgent != null && kbAgent.isTraining)
+        {
+            kbAgent.AddJudgement(noteScore, j);
+        }
+
+        #endregion
 
         m_judgementHits[j]++;
 

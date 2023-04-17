@@ -4,6 +4,7 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 namespace DancingAgents
 {
@@ -71,6 +72,19 @@ namespace DancingAgents
             }
         }
 
+        public override void OnActionReceived(ActionBuffers actionBuffers)
+        {
+            // Get the horizontal and vertical input
+            float horizontalInput = actionBuffers.ContinuousActions[0];
+            float verticalInput = actionBuffers.ContinuousActions[1];
+
+            // Move the player
+            Vector2 movement = new(horizontalInput, verticalInput);
+            transform.Translate(movement * maxSpeed * Time.deltaTime);
+
+            // TODO: Detect arrows and assign rewards
+        }
+
         public override void OnEpisodeBegin()
         {
             transform.position = m_initPos;
@@ -98,7 +112,7 @@ namespace DancingAgents
                         - GameManager.Instance.Receptors[note.Direction].transform.position.y);
                     result[activeArrowsFound] = new NoteData
                     {
-                        position = notePos,
+                        distance = notePos,
                         direction = note.Direction,
                         type = note.Type
                     };
@@ -109,10 +123,21 @@ namespace DancingAgents
             }
         }
 
-        public struct NoteData
+        protected struct NoteData
         {
-            public float position;
+            /// <summary>
+            /// Distance from the respective receptor.
+            /// </summary>
+            public float distance;
+
+            /// <summary>
+            /// The direction of the note's arrow.
+            /// </summary>
             public Directions direction;
+
+            /// <summary>
+            /// The type of note.
+            /// </summary>
             public NoteTypes type;
         }
     }

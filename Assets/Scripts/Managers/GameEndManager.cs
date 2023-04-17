@@ -5,6 +5,7 @@ using UnityEngine;
 using TMPro;
 using SimpleEasing;
 using UnityEngine.SceneManagement;
+using DancingAgents;
 
 public class GameEndManager : MonoBehaviour
 {
@@ -127,7 +128,15 @@ public class GameEndManager : MonoBehaviour
         }
 
         // We looped through the list but we didn't return so there's no note left
-        InitiateGameEnd();
+        KeyboardAgent kbAgent = KeyboardAgent.Instance;
+        if (kbAgent != null && kbAgent.isTraining)
+        {
+            kbAgent.FinishSong();
+        }
+        else
+        {
+            InitiateGameEnd();
+        }
 
         return true;
     }

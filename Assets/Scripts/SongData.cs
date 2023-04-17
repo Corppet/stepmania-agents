@@ -12,7 +12,7 @@ public class SongData
     
     public SongData()
     {
-        if(Instance != null)
+        if (Instance != null)
         {
             Instance = this;
         }
