@@ -30,9 +30,19 @@ namespace DancingAgents
 
         private ActionSegment<int> prevDiscretes;
 
+        private AudioSource[] audioSources;
+
         public override void Initialize()
         {
-            
+            if (isTraining)
+            {
+                audioSources = FindObjectsOfType<AudioSource>();
+                Debug.Log("Found " + audioSources.Length + " audio sources");
+                foreach (AudioSource source in audioSources)
+                {
+                    source.pitch = Time.timeScale;
+                }
+            }
         }
 
         public override void CollectObservations(VectorSensor sensor)
