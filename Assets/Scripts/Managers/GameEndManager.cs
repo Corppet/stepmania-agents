@@ -132,13 +132,13 @@ public class GameEndManager : MonoBehaviour
         if (kbAgent != null && kbAgent.isTraining)
         {
             kbAgent.FinishSong();
+            return false;
         }
         else
         {
             InitiateGameEnd();
+            return true;
         }
-
-        return true;
     }
 
     private void InitiateGameEnd()

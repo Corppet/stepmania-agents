@@ -15,6 +15,7 @@ namespace DancingAgents
 
         [Header("Agent Settings")]
         public bool isTraining;
+        public bool muteAudio;
         [Range(0, 100)]
         [Tooltip("How many notes the agent will observe at once?")]
         public int lookAheadSteps = 4;
@@ -28,7 +29,10 @@ namespace DancingAgents
         public float perfectReward = 0.5f; // reward for achieving a perfect score
         public float timeReward = 1f; // reward for completing the song
 
-        private ActionSegment<int> prevDiscretes;
+        [Space(10)]
+
+        [Header("References")]
+        [SerializeField] private KeyboardPadController m_controller;
 
         private AudioSource[] audioSources;
 
@@ -37,10 +41,13 @@ namespace DancingAgents
             if (isTraining)
             {
                 audioSources = FindObjectsOfType<AudioSource>();
-                Debug.Log("Found " + audioSources.Length + " audio sources");
                 foreach (AudioSource source in audioSources)
                 {
                     source.pitch = Time.timeScale;
+                    if (muteAudio)
+                    {
+                        source.mute = true;
+                    }
                 }
             }
         }
@@ -66,25 +73,10 @@ namespace DancingAgents
                 switch (keysPressed[i])
                 {
                     case 0:
-                        switch (prevDiscretes[i])
-                        {
-                            case 0: // key not pressed
-                                break;
-                            default: // key pressed
-                                input.InputPress((Directions)i);
-                                break;
-                        }
+                        m_controller.ReleaseKey((Directions)i);
                         break;
                     default:
-                        switch (prevDiscretes[i])
-                        {
-                            case 0: // key released
-                                input.InputRelease((Directions)i); 
-                                break;
-                            case 1: // key held
-                                input.InputHeld((Directions)i);
-                                break;
-                        }
+                        m_controller.PressKey((Directions)i);
                         break;
                 }
             }
@@ -92,9 +84,7 @@ namespace DancingAgents
 
         public override void OnEpisodeBegin()
         {
-            int[] startActions = { 0, 0, 0, 0 };
-            prevDiscretes = new(startActions);
-
+            Debug.Log("New episode starting.");
             GameManager.Instance.RestartGame();
         }
 
@@ -102,9 +92,9 @@ namespace DancingAgents
         {
             switch (judgement)
             {
-                case Judgements.miss:
-                    AddReward(-noteScore);
-                    break;
+                //case Judgements.miss:
+                //    AddReward(-noteScore);
+                //    break;
                 default:
                     AddReward(noteScore); 
                     break;
@@ -114,6 +104,18 @@ namespace DancingAgents
         public void FinishSong()
         {
             EndEpisode();
+        }
+
+        private void Awake()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
 
         protected NoteData[] LookAheadArrows
@@ -139,7 +141,6 @@ namespace DancingAgents
                     };
                     activeArrowsFound++;
                 }
-                Debug.Log("Read ahead " + result.Length + " notes.");
 
                 return result;
             }
