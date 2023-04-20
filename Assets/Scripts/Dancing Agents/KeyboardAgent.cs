@@ -92,9 +92,9 @@ namespace DancingAgents
         {
             switch (judgement)
             {
-                //case Judgements.miss:
-                //    AddReward(-noteScore);
-                //    break;
+                case Judgements.miss:
+                    AddReward(-noteScore);
+                    break;
                 default:
                     AddReward(noteScore); 
                     break;

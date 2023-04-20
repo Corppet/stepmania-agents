@@ -1,0 +1,38 @@
+{
+    "Keyboard Agent": {
+        "checkpoints": [
+            {
+                "steps": 499912,
+                "file_path": "results/kb_04/Keyboard Agent/Keyboard Agent-499912.onnx",
+                "reward": 45683.333333333336,
+                "creation_time": 1681972744.8236513,
+                "auxillary_file_paths": [
+                    "results/kb_04/Keyboard Agent/Keyboard Agent-499912.pt"
+                ]
+            },
+            {
+                "steps": 500912,
+                "file_path": "results/kb_04/Keyboard Agent/Keyboard Agent-500912.onnx",
+                "reward": 45685.71428571428,
+                "creation_time": 1681972744.9742632,
+                "auxillary_file_paths": [
+                    "results/kb_04/Keyboard Agent/Keyboard Agent-500912.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500912,
+            "file_path": "results/kb_04/Keyboard Agent.onnx",
+            "reward": 45685.71428571428,
+            "creation_time": 1681972744.9742632,
+            "auxillary_file_paths": [
+                "results/kb_04/Keyboard Agent/Keyboard Agent-500912.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.11.0+cu102"
+    }
+}
