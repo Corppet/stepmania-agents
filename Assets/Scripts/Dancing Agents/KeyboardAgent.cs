@@ -23,11 +23,8 @@ namespace DancingAgents
         [Space(5)]
 
         [Header("Reward Settings")]
-        public float arrowReward = 1f; // reward for pressing an arrow correctly
-        public float missPenalty = -1f; // penalty for missing an arrow
-        public float scoreReward = 0.1f; // reward for increasing the score
-        public float perfectReward = 0.5f; // reward for achieving a perfect score
-        public float timeReward = 1f; // reward for completing the song
+        [Tooltip("How much reward should the agent get when no note is near the input receptor?")]
+        public float noNoteReward = -1f;
 
         [Space(10)]
 
@@ -88,6 +85,11 @@ namespace DancingAgents
             GameManager.Instance.RestartGame();
         }
 
+        public void AddNoNoteReward()
+        {
+            AddReward(noNoteReward);
+        }
+
         public void AddJudgement(float noteScore, Judgements judgement)
         {
             switch (judgement)
@@ -96,7 +98,7 @@ namespace DancingAgents
                     AddReward(-noteScore);
                     break;
                 default:
-                    AddReward(noteScore); 
+                    AddReward(Mathf.Pow(noteScore, 2)); 
                     break;
             }
         }

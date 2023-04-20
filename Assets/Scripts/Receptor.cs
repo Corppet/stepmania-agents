@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using SimpleEasing;
+using DancingAgents;
 
 public class Receptor : MonoBehaviour
 {
@@ -122,6 +123,10 @@ public class Receptor : MonoBehaviour
         {
             float emitAmount = Random.Range(20, 40) * m_emmisionScale;
             m_particleSystem.Emit((int)emitAmount);
+        }
+        else
+        {
+            KeyboardAgent.Instance.AddNoNoteReward();
         }
     }
     public void KeyPressed()

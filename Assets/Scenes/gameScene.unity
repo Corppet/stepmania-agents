@@ -26422,11 +26422,7 @@ MonoBehaviour:
   isTraining: 1
   muteAudio: 1
   lookAheadSteps: 4
-  arrowReward: 1
-  missPenalty: -1
-  scoreReward: 0.1
-  perfectReward: 0.5
-  timeReward: 1
+  noNoteReward: -10
   m_controller: {fileID: 1749799715}
 --- !u!114 &1749799714
 MonoBehaviour:
@@ -26450,7 +26446,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 397c040031316364aa1b20cf3a61fbb7, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: f85a4d5e983181546a703ef5067ca024, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: Keyboard Agent
