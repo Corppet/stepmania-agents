@@ -25,6 +25,7 @@ namespace DancingAgents
         [Header("Reward Settings")]
         [Tooltip("How much reward should the agent get when no note is near the input receptor?")]
         public float noNoteReward = -1f;
+        public float missReward = -10f;
 
         [Space(10)]
 
@@ -94,11 +95,23 @@ namespace DancingAgents
         {
             switch (judgement)
             {
+                //case Judgements.miss:
+                //    AddReward(-noteScore);
+                //    break;
+                //default:
+                //    AddReward(noteScore); 
+                //    break;
+                case Judgements.marvelous:
+                    AddReward(noteScore * 2);
+                    break;
+                case Judgements.perfect:
+                    AddReward(noteScore);
+                    break;
                 case Judgements.miss:
-                    AddReward(-noteScore);
+                    AddReward(missReward);
                     break;
                 default:
-                    AddReward(Mathf.Pow(noteScore, 2)); 
+                    AddReward(- noteScore);
                     break;
             }
         }
