@@ -62,7 +62,6 @@ namespace DancingAgents
 
         public override void OnActionReceived(ActionBuffers actions)
         {
-            InputHandler input = InputHandler.Instance;
             ActionSegment<int> keysPressed = actions.DiscreteActions;
             
             // Determine type of input for each direction
@@ -82,7 +81,6 @@ namespace DancingAgents
 
         public override void OnEpisodeBegin()
         {
-            Debug.Log("New episode starting.");
             GameManager.Instance.RestartGame();
         }
 
@@ -95,23 +93,17 @@ namespace DancingAgents
         {
             switch (judgement)
             {
-                //case Judgements.miss:
-                //    AddReward(-noteScore);
-                //    break;
-                //default:
-                //    AddReward(noteScore); 
-                //    break;
                 case Judgements.marvelous:
-                    AddReward(noteScore * 2);
+                    AddReward(noteScore);
                     break;
                 case Judgements.perfect:
-                    AddReward(noteScore);
+                    AddReward(noteScore / 2);
                     break;
                 case Judgements.miss:
                     AddReward(missReward);
                     break;
                 default:
-                    AddReward(- noteScore);
+                    AddReward(missReward / noteScore);
                     break;
             }
         }

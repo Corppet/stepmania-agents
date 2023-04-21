@@ -6,7 +6,7 @@ public static class JudgementValues
 {
     private static List<Dictionary<Judgements, float>> m_judgementTimes;
 
-    public static Dictionary<Judgements, float> GetJugementTimes(int index)
+    public static Dictionary<Judgements, float> GetJudgementTimes(int index)
     {
         if (m_judgementTimes == null)
             GenerateTimes();

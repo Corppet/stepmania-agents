@@ -24,7 +24,7 @@ public class GameplayManager : MonoBehaviour
     {
         // Times are based on osu!mania's OD 8
         // https://new.ppy.sh/forum/t/442816 for more info
-        m_judgementTimes = JudgementValues.GetJugementTimes(Modifications.Instance.JudgeDiff);
+        m_judgementTimes = JudgementValues.GetJudgementTimes(Modifications.Instance.JudgeDiff);
     }
 
     void Start ()
