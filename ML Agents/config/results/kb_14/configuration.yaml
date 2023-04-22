@@ -34,10 +34,10 @@ behaviors:
           memory: null
           goal_conditioning_type: hyper
           deterministic: false
-    init_path: null
+    init_path: results/kb_13/Keyboard Agent/checkpoint.pt
     keep_checkpoints: 5
     checkpoint_interval: 500000
-    max_steps: 10000000
+    max_steps: 5000000
     time_horizon: 1000
     summary_freq: 100000
     threaded: false
@@ -63,10 +63,10 @@ engine_settings:
   no_graphics: false
 environment_parameters: null
 checkpoint_settings:
-  run_id: kb_13
-  initialize_from: null
+  run_id: kb_14
+  initialize_from: kb_13
   load_model: false
-  resume: true
+  resume: false
   force: false
   train_model: false
   inference: false

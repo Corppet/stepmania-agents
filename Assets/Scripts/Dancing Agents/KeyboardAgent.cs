@@ -138,8 +138,9 @@ namespace DancingAgents
                     if (!note.IsActive)
                         continue;
 
-                    float dist = Mathf.Abs(note.transform.position.y
-                        - GameManager.Instance.Receptors[note.Direction].transform.position.y);
+                    float dist = note.DistanceInSec;
+                    if (dist < 0)
+                        continue;
                     result[activeArrowsFound] = new NoteData
                     {
                         distance = dist,
