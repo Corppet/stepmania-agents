@@ -2,42 +2,6 @@
     "Keyboard Agent": {
         "checkpoints": [
             {
-                "steps": 2833514,
-                "file_path": "results/kb_12/Keyboard Agent/Keyboard Agent-2833514.onnx",
-                "reward": 34760.47649739583,
-                "creation_time": 1682104653.4558272,
-                "auxillary_file_paths": [
-                    "results/kb_12/Keyboard Agent/Keyboard Agent-2833514.pt"
-                ]
-            },
-            {
-                "steps": 2999399,
-                "file_path": "results/kb_12/Keyboard Agent/Keyboard Agent-2999399.onnx",
-                "reward": 35120.61953125,
-                "creation_time": 1682105815.1607187,
-                "auxillary_file_paths": [
-                    "results/kb_12/Keyboard Agent/Keyboard Agent-2999399.pt"
-                ]
-            },
-            {
-                "steps": 3175894,
-                "file_path": "results/kb_12/Keyboard Agent/Keyboard Agent-3175894.onnx",
-                "reward": 37065.202392578125,
-                "creation_time": 1682106627.6235745,
-                "auxillary_file_paths": [
-                    "results/kb_12/Keyboard Agent/Keyboard Agent-3175894.pt"
-                ]
-            },
-            {
-                "steps": 3499796,
-                "file_path": "results/kb_12/Keyboard Agent/Keyboard Agent-3499796.onnx",
-                "reward": 25363.50714111328,
-                "creation_time": 1682109386.8565352,
-                "auxillary_file_paths": [
-                    "results/kb_12/Keyboard Agent/Keyboard Agent-3499796.pt"
-                ]
-            },
-            {
                 "steps": 3923735,
                 "file_path": "results/kb_12/Keyboard Agent/Keyboard Agent-3923735.onnx",
                 "reward": 24047.031995985242,
@@ -45,15 +9,51 @@
                 "auxillary_file_paths": [
                     "results/kb_12/Keyboard Agent/Keyboard Agent-3923735.pt"
                 ]
+            },
+            {
+                "steps": 3999254,
+                "file_path": "results/kb_12/Keyboard Agent/Keyboard Agent-3999254.onnx",
+                "reward": 38090.599060058594,
+                "creation_time": 1682115173.49197,
+                "auxillary_file_paths": [
+                    "results/kb_12/Keyboard Agent/Keyboard Agent-3999254.pt"
+                ]
+            },
+            {
+                "steps": 4499298,
+                "file_path": "results/kb_12/Keyboard Agent/Keyboard Agent-4499298.onnx",
+                "reward": 35106.520345052086,
+                "creation_time": 1682117501.7739453,
+                "auxillary_file_paths": [
+                    "results/kb_12/Keyboard Agent/Keyboard Agent-4499298.pt"
+                ]
+            },
+            {
+                "steps": 4999832,
+                "file_path": "results/kb_12/Keyboard Agent/Keyboard Agent-4999832.onnx",
+                "reward": 40348.85192871094,
+                "creation_time": 1682119843.126859,
+                "auxillary_file_paths": [
+                    "results/kb_12/Keyboard Agent/Keyboard Agent-4999832.pt"
+                ]
+            },
+            {
+                "steps": 5000832,
+                "file_path": "results/kb_12/Keyboard Agent/Keyboard Agent-5000832.onnx",
+                "reward": 40348.85192871094,
+                "creation_time": 1682119843.2860363,
+                "auxillary_file_paths": [
+                    "results/kb_12/Keyboard Agent/Keyboard Agent-5000832.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 3923735,
+            "steps": 5000832,
             "file_path": "results/kb_12/Keyboard Agent.onnx",
-            "reward": 24047.031995985242,
-            "creation_time": 1682111583.1410182,
+            "reward": 40348.85192871094,
+            "creation_time": 1682119843.2860363,
             "auxillary_file_paths": [
-                "results/kb_12/Keyboard Agent/Keyboard Agent-3923735.pt"
+                "results/kb_12/Keyboard Agent/Keyboard Agent-5000832.pt"
             ]
         }
     },
