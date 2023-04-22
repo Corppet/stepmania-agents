@@ -2,15 +2,6 @@
     "Keyboard Agent": {
         "checkpoints": [
             {
-                "steps": 499701,
-                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-499701.onnx",
-                "reward": 25424.281649502842,
-                "creation_time": 1682177299.6540923,
-                "auxillary_file_paths": [
-                    "results/kb_14/Keyboard Agent/Keyboard Agent-499701.pt"
-                ]
-            },
-            {
                 "steps": 839306,
                 "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-839306.onnx",
                 "reward": -17181.8095703125,
@@ -18,15 +9,51 @@
                 "auxillary_file_paths": [
                     "results/kb_14/Keyboard Agent/Keyboard Agent-839306.pt"
                 ]
+            },
+            {
+                "steps": 999369,
+                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-999369.onnx",
+                "reward": 28107.08056640625,
+                "creation_time": 1682181271.4958224,
+                "auxillary_file_paths": [
+                    "results/kb_14/Keyboard Agent/Keyboard Agent-999369.pt"
+                ]
+            },
+            {
+                "steps": 1499386,
+                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-1499386.onnx",
+                "reward": 15314.682291666666,
+                "creation_time": 1682183743.450106,
+                "auxillary_file_paths": [
+                    "results/kb_14/Keyboard Agent/Keyboard Agent-1499386.pt"
+                ]
+            },
+            {
+                "steps": 1999752,
+                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-1999752.onnx",
+                "reward": 31877.157087053572,
+                "creation_time": 1682186543.3608744,
+                "auxillary_file_paths": [
+                    "results/kb_14/Keyboard Agent/Keyboard Agent-1999752.pt"
+                ]
+            },
+            {
+                "steps": 2320708,
+                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-2320708.onnx",
+                "reward": 34199.33346557617,
+                "creation_time": 1682188169.1469126,
+                "auxillary_file_paths": [
+                    "results/kb_14/Keyboard Agent/Keyboard Agent-2320708.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 839306,
+            "steps": 2320708,
             "file_path": "results/kb_14/Keyboard Agent.onnx",
-            "reward": -17181.8095703125,
-            "creation_time": 1682178621.0624015,
+            "reward": 34199.33346557617,
+            "creation_time": 1682188169.1469126,
             "auxillary_file_paths": [
-                "results/kb_14/Keyboard Agent/Keyboard Agent-839306.pt"
+                "results/kb_14/Keyboard Agent/Keyboard Agent-2320708.pt"
             ]
         }
     },
