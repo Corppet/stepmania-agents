@@ -2,58 +2,58 @@
     "Keyboard Agent": {
         "checkpoints": [
             {
-                "steps": 839306,
-                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-839306.onnx",
-                "reward": -17181.8095703125,
-                "creation_time": 1682178621.0624015,
+                "steps": 20999539,
+                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-20999539.onnx",
+                "reward": 57907.8474609375,
+                "creation_time": 1682261182.1231272,
                 "auxillary_file_paths": [
-                    "results/kb_14/Keyboard Agent/Keyboard Agent-839306.pt"
+                    "results/kb_14/Keyboard Agent/Keyboard Agent-20999539.pt"
                 ]
             },
             {
-                "steps": 999369,
-                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-999369.onnx",
-                "reward": 28107.08056640625,
-                "creation_time": 1682181271.4958224,
+                "steps": 21499339,
+                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-21499339.onnx",
+                "reward": 45803.174153645836,
+                "creation_time": 1682262791.7298424,
                 "auxillary_file_paths": [
-                    "results/kb_14/Keyboard Agent/Keyboard Agent-999369.pt"
+                    "results/kb_14/Keyboard Agent/Keyboard Agent-21499339.pt"
                 ]
             },
             {
-                "steps": 1499386,
-                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-1499386.onnx",
-                "reward": 15314.682291666666,
-                "creation_time": 1682183743.450106,
+                "steps": 21999256,
+                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-21999256.onnx",
+                "reward": 42416.874494280135,
+                "creation_time": 1682264675.4945476,
                 "auxillary_file_paths": [
-                    "results/kb_14/Keyboard Agent/Keyboard Agent-1499386.pt"
+                    "results/kb_14/Keyboard Agent/Keyboard Agent-21999256.pt"
                 ]
             },
             {
-                "steps": 1999752,
-                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-1999752.onnx",
-                "reward": 31877.157087053572,
-                "creation_time": 1682186543.3608744,
+                "steps": 22499489,
+                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-22499489.onnx",
+                "reward": 59872.476197984484,
+                "creation_time": 1682266479.9599073,
                 "auxillary_file_paths": [
-                    "results/kb_14/Keyboard Agent/Keyboard Agent-1999752.pt"
+                    "results/kb_14/Keyboard Agent/Keyboard Agent-22499489.pt"
                 ]
             },
             {
-                "steps": 2320708,
-                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-2320708.onnx",
-                "reward": 34199.33346557617,
-                "creation_time": 1682188169.1469126,
+                "steps": 22976661,
+                "file_path": "results/kb_14/Keyboard Agent/Keyboard Agent-22976661.onnx",
+                "reward": 58101.26689453125,
+                "creation_time": 1682268261.3882818,
                 "auxillary_file_paths": [
-                    "results/kb_14/Keyboard Agent/Keyboard Agent-2320708.pt"
+                    "results/kb_14/Keyboard Agent/Keyboard Agent-22976661.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 2320708,
+            "steps": 22976661,
             "file_path": "results/kb_14/Keyboard Agent.onnx",
-            "reward": 34199.33346557617,
-            "creation_time": 1682188169.1469126,
+            "reward": 58101.26689453125,
+            "creation_time": 1682268261.3882818,
             "auxillary_file_paths": [
-                "results/kb_14/Keyboard Agent/Keyboard Agent-2320708.pt"
+                "results/kb_14/Keyboard Agent/Keyboard Agent-22976661.pt"
             ]
         }
     },
