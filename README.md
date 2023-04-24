@@ -7,6 +7,7 @@ done as part of the final project for the COGS-4420 Game AI course at Rensselaer
 
 # Credits
  - Stepmania clone environment (a.k.a. UnityMania) by [Kaj Rumpff](https://github.com/rumpff/unitymania)
+ - Example songs and charts by [Benpai](https://www.patreon.com/noticemebenpai)
  - Machine Learning implementation and training by [Ivan Ho](https://github.com/Corppet)
 
 # Installation
@@ -24,7 +25,7 @@ More infomation about using Unity ML Agents can be found on the package's [offic
   2. Select the `Keyboard Pad` game object, and under the `Keyboard Agent` component in the inspector, enable the `Is Training` option.
   3. Navigate to `songSelectScene` and run ML Agents with your Python environment in `./ML Agents/config` with the following command:
 ```sh
-mlagents-learn keyboard.yaml --run-id=<run id>
+mlagents-learn keyboard.yaml --run-id=<run-id>
 ```
   4. Play the `songSelectScene` and select a song and difficulty to train the agent on.
 
