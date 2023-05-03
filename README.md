@@ -5,6 +5,8 @@ an open-source rhythm game where players need to make keyboard inputs in a speci
 StepMania recreated in Unity and utilizes Unity ML Agents to train machine learning agents in the editor. Work for the project was 
 done as part of the final project for the COGS-4420 Game AI course at Rensselaer Polytechnic Institute.
 
+A report of the project can be found in [`./Reports`](Reports/Final%20Project%20Report%20-%20IEEE%20Format.pdf).
+
 # Credits
  - StepMania clone environment (a.k.a. UnityMania) by [Kaj Rumpff](https://github.com/rumpff/unitymania)
  - Example songs and charts by [Benpai](https://www.patreon.com/noticemebenpai)
