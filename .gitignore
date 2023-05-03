@@ -72,6 +72,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # UnityMania folders
-/Songs/
+# /Songs/
 /UserData/
 /NoteSkins/
